@@ -32,7 +32,7 @@ export default function Homepage({ getDataDetails, recipeDetails }) {
       let response = await fetch(
         `https://api.spoonacular.com/recipes/complexSearch?query=${encodedSearchQuery}&cuisine=${
           cuisineIsChecked ? cuisineIsChecked.join(",") : null
-        }&number=50&apiKey=1f6183fb1ab64639b25c503248c7da3b`,
+        }&number=50&apiKey=69d0850be8cd47da9bf6d59767cf1c1f`,
         { "Content-Type": "application/json" }
       );
 

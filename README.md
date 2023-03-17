@@ -2,7 +2,7 @@
 
 To run this app locally...
 
-1. Run `NPM i` in the terminal to download all necessary dependencies. Terminal can be opened with CTRL + SHIFT + `.
+1. Run `NPM i` in the terminal to download all necessary dependencies. With VS Code, the terminal can be opened with CTRL + SHIFT + `.
 
 2. Enter `npm start`in the terminal, hit enter. A window should open in your browser at `localhost:3000` with the app available.
 
@@ -31,10 +31,10 @@ To run this app locally...
 
 7. Dynamically generated pagination.
 
-8. Amongst others!
+8. Fully responsive design for mobile, tablet, and desktop users.
 
 ## Bugs/Future Improvements
 
-- Hitting the back button on the details page returns the user to the first page, instead of the last page visited in the pagination. This can likely be fixed with inputting the related values into useEffect.
+- Hitting the back button on the details page returns the user to the first page, instead of the last page visited with the pagination. This can likely be fixed with inputting the related values into useEffect.
 
 - A button to remove all checked boxes in the filter modal should be added as a "quality of life" improvement.

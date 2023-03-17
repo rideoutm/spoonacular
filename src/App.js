@@ -11,7 +11,7 @@ function App() {
   const getDataDetails = async (id) => {
     try {
       let response = await fetch(
-        `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=true&apiKey=1f6183fb1ab64639b25c503248c7da3b`,
+        `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=true&apiKey=69d0850be8cd47da9bf6d59767cf1c1f`,
         { "Content-Type": "application/json" }
       );
 
