@@ -4,7 +4,7 @@ To run this app locally...
 
 1. Run `NPM i` in the terminal to download all necessary dependencies. With VS Code, the terminal can be opened with CTRL + SHIFT + `.
 
-2. Enter `npm start`in the terminal, hit enter. A window should open in your browser at `localhost:3000` with the app available.
+2. Enter `npm start` in the terminal, hit enter. A window should open in your browser at `localhost:3000/spoonacular` with the app available.
 
 3. Please note that making MANY search requests may result in the Spoonacular API request quota being met, at which point the quota will reset back to 0 after 24 hrs.
 
