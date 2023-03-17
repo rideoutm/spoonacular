@@ -2,7 +2,6 @@ import React from "react";
 import "./SearchResultsCont.scss";
 
 // components
-import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 import Pagination from "../Pagination/Pagination";
 
 // utils
@@ -37,7 +36,12 @@ export default function SearchResultsCont({ searchQuery, getDataDetails, noResul
     setCurrentPage(pageNumber);
   };
 
-  if (!currentPosts) return <LoadingSpinner />;
+  if (!currentPosts)
+    return (
+      <p style={{ fontSize: "2rem", fontFamily: "arial", textAlign: "center", marginTop: "2rem" }}>
+        Search by food type and/or filter by region
+      </p>
+    );
 
   return (
     <>

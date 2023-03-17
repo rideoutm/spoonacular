@@ -35,10 +35,11 @@ export default function Homepage({ getDataDetails, recipeDetails }) {
         }&number=50&apiKey=69d0850be8cd47da9bf6d59767cf1c1f`,
         { "Content-Type": "application/json" }
       );
-
+      console.log(response);
       if (!response.ok) {
         throw new Error("Error Fetching, status: ", response.status);
       }
+
       let data = await response.json();
       let { results } = data;
 
