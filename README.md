@@ -37,4 +37,6 @@ To run this app locally...
 
 - Hitting the back button on the details page returns the user to the first page, instead of the last page visited with the pagination. This can likely be fixed with inputting the related values into useEffect.
 
+- Periodically the search results can get hung up with only the pagination showing. Refreshing the page to trigger retrieving the results from session storage via useEffect shows the results. This is likely due to a timing issue between the async GET request and the component rendering. Adding a setTimeout to briefly delay setting the searchQuery state in the async getData function to allow the component to first load may solve this.
+
 - A button to remove all checked boxes in the filter modal should be added as a "quality of life" improvement.
