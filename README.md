@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Spoonacular Recipe Search App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To run this app locally...
 
-## Available Scripts
+1. Run `NPM i` in the terminal to download all necessary dependencies. Terminal can be opened with CTRL + SHIFT + `.
 
-In the project directory, you can run:
+2. Enter `npm start`in the terminal, hit enter. A window should open in your browser at `localhost:3000` with the app available.
 
-### `npm start`
+3. Please note that making MANY search requests may result in the Spoonacular API request quota being met, at which point the quota will reset back to 0 after 24 hrs.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React.js v18.2.0
+- React Router v6.9
+- Sass/SCSS v1.58.3
+- Spoonacular API [https://spoonacular.com]
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Dynamically generated URLs.
 
-### `npm run build`
+2. Hooks-based React SPA.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Entering a search term will generate a list of recipes related to the search. Each recipe is clickable and will direct to a details page, containing its name, an image of the recipe, health info, ingredients, and cooking instructions.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Search Input is URLencoded to prevent malicious code injection.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Search results can be filtered by region by checkbox.
 
-### `npm run eject`
+6. The search results are stored in session storage and retrieved with useEffect. Search results will persist despite navigating to another page or browser refresh.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+7. Dynamically generated pagination.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+8. Amongst others!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Bugs/Future Improvements
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Hitting the back button on the details page returns the user to the first page, instead of the last page visited in the pagination. This can likely be fixed with inputting the related values into useEffect.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- A button to remove all checked boxes in the filter modal should be added as a "quality of life" improvement.
