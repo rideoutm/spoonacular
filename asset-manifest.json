@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/spoonacular/static/css/main.1cbf2d16.css",
-    "main.js": "/spoonacular/static/js/main.c20160f8.js",
+    "main.js": "/spoonacular/static/js/main.47b81faa.js",
     "index.html": "/spoonacular/index.html",
     "main.1cbf2d16.css.map": "/spoonacular/static/css/main.1cbf2d16.css.map",
-    "main.c20160f8.js.map": "/spoonacular/static/js/main.c20160f8.js.map"
+    "main.47b81faa.js.map": "/spoonacular/static/js/main.47b81faa.js.map"
   },
   "entrypoints": [
     "static/css/main.1cbf2d16.css",
-    "static/js/main.c20160f8.js"
+    "static/js/main.47b81faa.js"
   ]
 }
