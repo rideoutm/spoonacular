@@ -17,14 +17,14 @@ export default function SearchResultsCont({ searchQuery, getDataDetails, noResul
     getDataDetails(id);
   };
 
-  // retrieve search results from session storage on render
-  useEffect(() => {
-    setSearchQuery({ list: JSON.parse(window.sessionStorage.getItem("search")) });
-  }, []);
-
   // Pagination states
   const [postsPerPage, setPostsPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
+
+  // retrieve search results from session storage on render
+  useEffect(() => {
+    setSearchQuery({ list: JSON.parse(window.sessionStorage.getItem("search")) });
+  }, [currentPage]);
 
   // Pagination values
   const IndexOfLastPost = currentPage * postsPerPage;

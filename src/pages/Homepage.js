@@ -13,7 +13,6 @@ import { useState } from "react";
 export default function Homepage({ getDataDetails, recipeDetails }) {
   // State for search query input value
   const [searchQuery, setSearchQuery] = useState({ query: "", list: [] });
-  const [isLoading, setIsLoading] = useState(true);
 
   // State to manage cuisine filter checkbox state
   const [cuisineIsChecked, setCuisineIsChecked] = useState([]);
@@ -27,7 +26,6 @@ export default function Homepage({ getDataDetails, recipeDetails }) {
   // Fetch search data
   const getData = async (enteredValue) => {
     try {
-      setIsLoading(true);
       let encodedSearchQuery = encodeURI(enteredValue);
       let response = await fetch(
         `https://api.spoonacular.com/recipes/complexSearch?query=${encodedSearchQuery}&cuisine=${
@@ -51,7 +49,6 @@ export default function Homepage({ getDataDetails, recipeDetails }) {
 
       setSearchQuery({ query: enteredValue, list: results });
       window.sessionStorage.setItem("search", JSON.stringify(results));
-      setIsLoading(false);
     } catch (error) {
       console.error("Error caught: ", error);
     }
@@ -71,7 +68,6 @@ export default function Homepage({ getDataDetails, recipeDetails }) {
       <SearchResultsCont
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
-        isLoading={isLoading}
         recipeDetails={recipeDetails}
         getDataDetails={getDataDetails}
         noResultsFound={noResultsFound}
