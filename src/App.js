@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/spoonacular">
         <Routes>
           <Route path="/" element={<Homepage getDataDetails={getDataDetails} recipeDetails={recipeDetails} />} />
           <Route path="/recipe/:id" element={<CuisineDetails recipeDetails={recipeDetails} />} />
